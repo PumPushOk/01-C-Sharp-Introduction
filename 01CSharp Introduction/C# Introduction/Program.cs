@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace C__Introduction
+ namespace C__Introduction
 {
 	internal class Program
 	{
