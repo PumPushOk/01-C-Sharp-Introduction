@@ -205,8 +205,9 @@
 			Console.Write("Enter a sentence: ");
 			string input = Console.ReadLine();
 
-			Console.WriteLine("Encrypted sentense: " + Encrypt(input, 3));
-			Console.WriteLine("Decrypted sentense: " + Decrypt(input, 3));
+			string encrypted = Encrypt(input, 3);
+			Console.WriteLine("Encrypted sentense: " + encrypted);
+			Console.WriteLine("Decrypted sentense: " + Decrypt(encrypted, 3));
 		}
 	}
 	internal class Program
@@ -215,7 +216,7 @@
 		{
 			//Task1.Run();
 			//Task2.Run();
-			//Task3.Run();
+			Task3.Run();
 		}
 	}
 }
