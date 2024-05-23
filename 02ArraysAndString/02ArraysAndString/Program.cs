@@ -166,12 +166,52 @@
 			Console.WriteLine("Sum = " + sum);
 		}
 	}
+	static class Task3
+	{
+		private static string Encrypt(string input, int length)
+		{
+			string result = null;
+			foreach (char c in input)
+			{
+				char symbol = Convert.ToChar((c + length));
+				if (symbol > 'z')
+					symbol -= Convert.ToChar('z' - 'a' + 1);
+				else if (symbol > 'Z' && symbol < 'a')
+					symbol -= Convert.ToChar('Z' - 'A' + 1);
+				result += symbol;
+			}
+			return result;
+		}
+		private static string Decrypt(string input, int length)
+		{
+			string result = null;
+			foreach (char c in input)
+			{
+				char symbol = Convert.ToChar((c - length));
+				if (symbol < 'A')
+					symbol += Convert.ToChar('Z' - 'A' + 1);
+				else if (symbol < 'a' && symbol > 'Z')
+					symbol += Convert.ToChar('z' - 'a' + 1);
+				result += symbol;
+			}
+			return result;
+		}
+		public static void Run()
+		{
+			Console.Write("Enter a sentence: ");
+			string input = Console.ReadLine();
+
+			Console.WriteLine("Encrypted sentense: " + Encrypt(input, 3));
+			Console.WriteLine("Decrypted sentense: " + Decrypt(input, 3));
+		}
+	}
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
 			//Task1.Run();
-			Task2.Run();
+			//Task2.Run();
+			//Task3.Run();
 		}
 	}
 }
