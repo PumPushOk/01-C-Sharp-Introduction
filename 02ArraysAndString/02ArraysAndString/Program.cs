@@ -211,7 +211,7 @@
 	}
 	internal class Program
 	{
-		static void Main(string[] args)
+		static void Main()
 		{
 			//Task1.Run();
 			//Task2.Run();
