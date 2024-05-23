@@ -95,12 +95,83 @@
 			Console.WriteLine("Odd Sum = " + oddSum);
 		}
 	}
+
+	static class Task2
+	{
+		public static void Run()
+		{
+			int[,] nums = new int[5, 5];
+			for (int i = 0; i < nums.GetLength(0); i++)
+			{
+				for (int j = 0; j < nums.GetLength(1); j++)
+				{
+					nums[i, j] = Random.Shared.Next(-100, 101);
+					Console.Write(nums[i, j] + " ");
+				}
+				Console.WriteLine();
+			}
+			int min = int.MaxValue;
+			int max = int.MinValue;
+			foreach (int i in nums)
+			{
+				if (i < min)
+					min = i;
+				if (i > max)
+					max = i;
+			}
+			Console.WriteLine("Min = " + min);
+			Console.WriteLine("Max = " + max);
+
+			int start = 0;
+			int finish = 0;
+			foreach (int i in nums)
+			{
+				if (i == min || i == max)
+				{
+					start = i;
+					if (i != min)
+						finish = min;
+					else
+						finish = max;
+					break;
+				}
+			}
+			Console.WriteLine("Start = " + start);
+			Console.WriteLine("Finish = " + finish);
+
+			int sum = 0;
+			bool isStarted = false;
+			bool isEnd = false;
+			for (int i = 0; i < nums.GetLength(0); i++)
+			{
+				for (int j = 0; j < nums.GetLength(1); j++)
+				{
+					if (nums[i, j] == finish)
+					{
+						isEnd = true;
+						break;
+					}
+					if (isStarted)
+					{
+						sum += nums[i, j];
+					}
+					if (nums[i, j] == start)
+					{
+						isStarted = true;
+					}
+				}
+				if (isEnd)
+					break;
+			}
+			Console.WriteLine("Sum = " + sum);
+		}
+	}
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			Task1.Run();
-
+			//Task1.Run();
+			Task2.Run();
 		}
 	}
 }
