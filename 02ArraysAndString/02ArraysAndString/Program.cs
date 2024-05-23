@@ -95,7 +95,6 @@
 			Console.WriteLine("Odd Sum = " + oddSum);
 		}
 	}
-
 	static class Task2
 	{
 		public static void Run()
