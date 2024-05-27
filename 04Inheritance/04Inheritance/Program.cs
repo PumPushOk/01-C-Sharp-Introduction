@@ -45,8 +45,12 @@
 			//Console.WriteLine(violoncello);
 
 			//Завдання 4
-			President president = new President("Macho", "ruling");
-			president.Work();
+			//Worker worker = new Worker();
+			//worker.Print();
+			//Security security = new Security();
+			//security.Print();
+			//President president = new President();
+			//president.Print();
 		}
 	}
 }
