@@ -44,10 +44,9 @@
 			//	);
 			//Console.WriteLine(violoncello);
 
-
 			//Завдання 4
-			//President president = new President("Macho", "ruling");
-			//president.Work();
+			President president = new President("Macho", "ruling");
+			president.Work();
 		}
 	}
 }

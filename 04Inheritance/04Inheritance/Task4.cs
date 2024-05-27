@@ -2,32 +2,37 @@
 {
 	class Worker
 	{
-		string name;
-		string work;
-		public Worker(string name, string work)
+		public virtual void Print()
 		{
-			this.name = name;
-			this.work = work;
-		}
-		public void Work()
-		{
-			Console.WriteLine($"I'm a {name}. My work is {work}.");
+			Console.WriteLine($"I'm a Worker. My work is to do some work.");
 		}
 	}
 	class President : Worker
 	{
-		public President(string name, string work) : base(name, work) { }
+		public override void Print()
+		{
+			Console.WriteLine($"I'm a President. My work is to rule country.");
+		}
 	}
 	class Security : Worker
 	{
-		public Security(string name, string work) : base(name, work) { }
+		public override void Print()
+		{
+			Console.WriteLine($"I'm a Security. My work is to protect something.");
+		}
 	}
 	class Manager : Worker
 	{
-		public Manager(string name, string work) : base(name, work) { }
+		public override void Print()
+		{
+			Console.WriteLine($"I'm a Manager. My work is to manage workers.");
+		}
 	}
 	class Engineer : Worker
 	{
-		public Engineer(string name, string work) : base(name, work) { }
+		public override void Print()
+		{
+			Console.WriteLine($"I'm a Engineer. My work is to create new objects.");
+		}
 	}
 }
