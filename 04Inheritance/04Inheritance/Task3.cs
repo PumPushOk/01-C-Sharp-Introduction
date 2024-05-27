@@ -29,6 +29,10 @@
 		{
 			Console.Write(history);
 		}
+		public override string ToString()
+		{
+			return $"{name} - {description} - {sound} - {history}";
+		}
 	}
 	class Violin : MusicInstrument
 	{

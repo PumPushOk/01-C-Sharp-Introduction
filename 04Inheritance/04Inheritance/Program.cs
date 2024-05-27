@@ -13,21 +13,37 @@
 			//Console.WriteLine("Product price: " + product);
 
 			//Завдання 2
-			//Kettle kettle = new Kettle("Kettle", "Boiling water", "*whistle*");
+			//Kettle kettle = new Kettle("Kettle", "Boiling", "*Shhhhhhhh*");
 			//kettle.Show();
 			//Console.Write(" - ");
 			//kettle.Desc();
 			//Console.Write(" - ");
-			//kettle.PlaySound();
+			//kettle.Sound();
 			//Console.WriteLine();
-			//Auto auto = new Auto("Car", "Riding", "*Brrrrr*");
+			//Auto auto = new Auto("Car", "Riding", "*Beep Beep*");
 			//auto.Show();
 			//Console.Write(" - ");
 			//auto.Desc();
 			//Console.Write(" - ");
-			//auto.PlaySound();
+			//auto.Sound();
 
 			//Завдання 3
+			//Ukulele ukulele = new Ukulele(
+			//	name: "Ukulele",
+			//	description: "Guitar-like instrument with 4 strings",
+			//	sound: "Aloha",
+			//	history: "Developed in the 1880s"
+			//	);
+			//Console.WriteLine(ukulele);
+
+			//Violoncello violoncello = new Violoncello(
+			//	name: "Violoncello",
+			//	description: "Just huge violin",
+			//	sound: "Wiiiuuu",
+			//	history: "Went out of fashion around the end of the 17th century in most countries"
+			//	);
+			//Console.WriteLine(violoncello);
+
 
 			//Завдання 4
 			//President president = new President("Macho", "ruling");
